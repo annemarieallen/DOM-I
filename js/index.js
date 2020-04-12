@@ -41,9 +41,21 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+//Images
+let circleImg = document.querySelector("#cta-img");
+
+let middleImg=document.querySelector("middle-img");
+
+circleImg.setAttribute('src', siteContent['cta']['img-src'
+]);
+
+middleImg.setAttribute('src',siteContent['main-content']['middle-img-src']);
+
+
 
 // NAV 
 let menuItems = document.querySelectorAll("a");
+
 
 menuItems.forEach((nav)=>{
   menuItems[0].textContent="Services";
