@@ -40,3 +40,89 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// NAV
+
+let nav = document.querySelectorAll('a')
+console.log(nav);
+
+// CTA 
+
+//cta text
+const ctaText = document.querySelector('.cta-text h1');
+ctaText.textContent=siteContent['cta']['h1'];
+
+//image 
+let ctaImg = document.getElementById("cta-img");
+ctaImg.src = "img/header-img.png";
+ctaImg.alt = "Image of a code snippet :)"
+
+//button 
+let ctaButton = document.querySelector('.cta-text button');
+ctaButton.textContent=siteContent['cta']['button'];
+
+// MAIN CONTENT 
+
+// Top – features & about 
+const topContentTitle = document.querySelectorAll('.top-content .text-content h4');
+console.log(topContentTitle);
+
+topContentTitle[0].textContent=siteContent["main-content"]["features-h4"];
+topContentTitle[1].textContent=siteContent["main-content"]["about-h4"];
+
+const topContentText = document.querySelectorAll(".top-content .text-content p");
+
+topContentText[0].textContent=siteContent["main-content"]["features-content"]
+
+topContentText[1].textContent=siteContent["main-content"]["about-content"]
+
+// image 
+
+let middleImg = document.getElementById('middle-img');
+console.log(middleImg)
+middleImg.src="img/mid-page-accent.jpg"
+middleImg.alt="Image of code snippets across the screen"
+
+// Bottom 
+
+const bottomContentTitle = document.querySelectorAll(".bottom-content .text-content h4");
+
+bottomContentTitle[0].textContent = siteContent['main-content']
+['services-h4']
+
+bottomContentTitle[1].textContent = siteContent['main-content']
+['product-h4']
+
+bottomContentTitle[2].textContent = siteContent['main-content']
+['vision-h4']
+
+const bottomContentText = document.querySelectorAll(".bottom-content .text-content p");
+
+bottomContentText[0].textContent = siteContent['main-content']
+['services-content']
+
+bottomContentText[1].textContent = siteContent['main-content']
+['services-content']
+
+bottomContentText[2].textContent = siteContent['main-content']
+['vision-content']
+
+// CONTACT 
+
+const contactTitle = document.querySelector('.contact h4')
+
+contactTitle.textContent = siteContent['contact']['contact-h4']
+
+const contactLines = document.querySelectorAll('.contact p')
+
+contactLines[0].textContent = siteContent['contact']['address']
+
+contactLines[1].textContent = siteContent['contact']['phone']
+
+contactLines[2].textContent = siteContent['contact']['email']
+
+// FOOTER 
+
+const footer = document.querySelector('footer')
+
+footer.textContent = siteContent['footer']['copyright']
