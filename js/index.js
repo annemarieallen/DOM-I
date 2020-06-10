@@ -42,9 +42,33 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // NAV
+// let menuItems = document.querySelectorAll("a");
 
-let nav = document.querySelectorAll('a')
-console.log(nav);
+const nav = Array.from(document.querySelectorAll("nav a"));
+
+nav.forEach( b =>{
+  b.style.color="green";
+})
+
+// menuItems.forEach((nav)=>{
+//   menuItems[0].textContent="Services";
+//   menuItems[1].textContent="Product";
+//   menuItems[2].textContent="Vision";
+//   menuItems[3].textContent="Features";
+//   menuItems[4].textContent="About";
+//   menuItems[5].textContent="Contact";
+// })
+
+
+
+// for (i=0;i<nav.length;i++){
+//   const navItem=`nav-item-${i+1}`
+//   nav[i].style.color="green";
+// }
+
+// const newNavBlog = document.createElement('nav a');
+// newNavBlog.textContent = "Home";
+
 
 // CTA 
 
@@ -65,7 +89,7 @@ ctaButton.textContent=siteContent['cta']['button'];
 
 // Top – features & about 
 const topContentTitle = document.querySelectorAll('.top-content .text-content h4');
-console.log(topContentTitle);
+// console.log(topContentTitle);
 
 topContentTitle[0].textContent=siteContent["main-content"]["features-h4"];
 topContentTitle[1].textContent=siteContent["main-content"]["about-h4"];
