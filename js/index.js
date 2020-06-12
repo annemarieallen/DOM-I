@@ -42,39 +42,43 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // NAV
-// let menuItems = document.querySelectorAll("a");
 
-const nav = Array.from(document.querySelectorAll("nav a"));
+const nav = document.querySelectorAll("nav a");
 
-nav.forEach( b =>{
-  b.style.color="green";
-})
+nav.forEach(e => e.style.color = "green");
 
-// menuItems.forEach((nav)=>{
-//   menuItems[0].textContent="Services";
-//   menuItems[1].textContent="Product";
-//   menuItems[2].textContent="Vision";
-//   menuItems[3].textContent="Features";
-//   menuItems[4].textContent="About";
-//   menuItems[5].textContent="Contact";
-// })
+nav[0].textContent = siteContent.nav["nav-item-1"];
+nav[1].textContent = siteContent.nav["nav-item-2"];
+nav[2].textContent = siteContent.nav["nav-item-3"];
+nav[3].textContent = siteContent.nav["nav-item-4"];
+nav[4].textContent = siteContent.nav["nav-item-5"];
+nav[5].textContent = siteContent.nav["nav-item-6"];
 
 
+// new nav elements 
 
-// for (i=0;i<nav.length;i++){
-//   const navItem=`nav-item-${i+1}`
-//   nav[i].style.color="green";
-// }
+const newNav = document.querySelector("nav");
 
-// const newNavBlog = document.createElement('nav a');
-// newNavBlog.textContent = "Home";
+const home = document.createElement('a');
+home.textContent = "Home";
+home.href = "#";
+home.style.color = "green";
+
+const blog = document.createElement('a');
+blog.textContent = "Blog";
+blog.href = "#";
+blog.style.color = "green";
+
+newNav.prepend(home);
+newNav.append(blog);
 
 
 // CTA 
 
 //cta text
 const ctaText = document.querySelector('.cta-text h1');
-ctaText.textContent=siteContent['cta']['h1'];
+// ctaText.textContent=siteContent['cta']['h1'];
+ctaText.innerHTML = siteContent['cta']['h1'].replace(/\s/g, "</br>");
 
 //image 
 let ctaImg = document.getElementById("cta-img");
